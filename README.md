@@ -1,1 +1,1 @@
-# TEMERO
+# TEMERO is an interactive web apps for Ethiopians’ that allows learners to access the app from web browser with an active internet connection from remote location. It gets it’s name from Amharic word “Temero” which means Education. It allows users to sign-up and sign-in to access and enroll the contents of the courses. It also includes book recommendation system for registered students.
