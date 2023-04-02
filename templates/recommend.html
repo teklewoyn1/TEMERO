@@ -1,0 +1,32 @@
+{% extends "home_template.html" %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 mt-5">
+                <h1 class="text-white" style="font-size:50px">Recommend Reads</h1>
+                <form action="/recommend_books" method="post">
+                    <input name="user_input" type="text" class="form-control mt-5"><br>
+                    <input type="submit" class="btn btn-lg btn-warning">
+                </form>
+            </div>
+
+            {% if data %}
+
+             {% for i in data %}
+                <div class="col-md-2" style="margin-top:50px">
+                    <div class="card bg-dark">
+                        <div class="card-body">
+                            <img class="card-img-top" style="width: 160px; height: 200px" src="{{i[2]}}">
+                            <p class="text-white" style="font-size: 15px">{{i[0]}}</p>
+                            <h4 class="text-white" style="font-size: 15px">{{i[1]}}</h4>
+                        </div>
+                    </div>
+                </div>
+             {% endfor %}
+
+            {% endif %}
+
+        </div>
+    </div>
+{% endblock content %}

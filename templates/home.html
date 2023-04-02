@@ -1,0 +1,68 @@
+{% extends "home_template.html" %}
+
+{% block content %}
+
+  <div class="container-fluid">
+    <div class="row">
+
+ <div class="col-sm-2 mt-5">
+      <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+          <a class="nav-link active bg-dark" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active bg-dark" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active bg-dark" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active bg-dark" href="#">Disabled</a>
+        </li>
+      </ul>
+      <hr class="d-sm-none">
+
+      <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+          <a class="nav-link active bg-dark" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active bg-dark" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active bg-dark" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active bg-dark" href="#">Disabled</a>
+        </li>
+      </ul>
+      <hr class="d-sm-none">
+
+
+
+    </div>
+
+
+        <div class="col-md-10">
+          <div class="container-fluid">
+             <div class="row">
+        {% for i in range(book_name|length) %}
+            <div class="col-md-2" style="margin-top:50px">
+                <div class="card bg-dark">
+                    <div class="card-body">
+                        <img class="card-img-top" style="width: 160px; height: 200px" src="{{ image[i] }}">
+                        <p class="text-white" style="font-size: 15px">{{ book_name[i] }}</p>
+                        <h6 class="text-white" style="font-size: 15px">{{ author[i] }}</h6>
+                        <h6 class="text-white" style="font-size: 15px">Votes - {{ votes[i] }}</h6>
+                        <h6 class="text-white" style="font-size: 15px">Rating - {{ rating[i] }}</h6>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+            </div>
+          </div>
+        </div>
+
+    </div>
+  </div>
+{% endblock %}
